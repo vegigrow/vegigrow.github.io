@@ -1,6 +1,6 @@
 {
-    "name": "vegigrow_admin1",
-    "short_name": "vegigrow_admin1",
+    "name": "vegigrow_admin",
+    "short_name": "vegigrow_admin",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
