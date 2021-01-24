@@ -67603,7 +67603,7 @@ return P.V(S.cg(J.jN(a.a)).el(0),$async$$1)
 case 2:o=c
 n=q.a
 P.bs(n.cy)
-p=F.aV(u.N+H.b(n.a.d))
+p=F.aV(u.l+H.b(n.a.d))
 p.e.bB(0,p.b,P.a9(["outOfStock",!1,"imageUrl",J.af(o),"category",n.a.e,"discount",C.d.j(C.d.cz(100-n.e/n.x*100)),"name",n.d,"discountfor500gm",C.d.j(C.d.cz(100-n.f/(n.x*0.5)*100)),"discountfor250gm",C.d.j(C.d.cz(100-n.r/(n.x*0.25)*100)),"price",J.af(n.x),"type",n.Q],t.X,t.z)).a6(0,new T.adX(n),t.P)
 return P.P(null,r)}})
 return P.Q($async$$1,r)},
