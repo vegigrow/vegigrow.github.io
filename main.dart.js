@@ -17969,9 +17969,9 @@ _.ch=l},
 y7:function y7(a,b){this.c=a
 this.a=b},
 P3:function P3(a,b){var _=this
-_.e=a
-_.f=1
-_.r=""
+_.d=a
+_.e=1
+_.f=""
 _.a=null
 _.b=b
 _.c=null},
@@ -68545,9 +68545,11 @@ s.d=!1
 s.wj(0)},
 $S:0}
 V.aht.prototype={
-$1:function(a){var s=this.a
-if(a.f==s.a.c){s.e.push(a)
-s.y.push(a)}},
+$1:function(a){var s,r=this.a
+if(a.f==r.a.c){s=r.x
+if(s!=null&&C.c.G(a.b.toLowerCase(),s.toLowerCase()))r.e.push(a)
+if(r.x==null)r.e.push(a)
+r.y.push(a)}},
 $S:33}
 V.ahs.prototype={
 $1:function(a){var s=this.a
@@ -68780,9 +68782,11 @@ r=i.h(b,"token")
 q=P.bF(J.ai(i.h(b,"delivery")))
 p=i.h(b,"userId")
 o=i.h(b,"phoneNo")
+if(o==null)o=""
 n=i.h(b,"address")
 m=P.arE(J.ai(i.h(b,"DateTime")))
 l=i.h(b,"name")
+if(l==null)l=""
 k=i.h(b,"orderStatus")
 j=i.h(b,"paymentMode")
 s.push(new S.fT(q,a,p,l,n,i.h(b,"total"),k,j,o,f,m,r))},
@@ -68791,8 +68795,21 @@ D.aiD.prototype={
 $2:function(a,b){if(b!=null)this.a.push(b)},
 $S:7}
 D.aiE.prototype={
-$1:function(a){var s=null,r=J.U(a),q=r.h(a,"category"),p=r.h(a,"discount"),o=r.h(a,"id"),n=r.h(a,"name"),m=r.h(a,"quantity"),l=r.h(a,"type")
-return P.d5([this.a.push(new R.eX(o,n,s,r.h(a,"price"),p,q,m,l,s,s,s))],t.H)},
+$1:function(a){var s,r,q,p,o,n=null,m=J.U(a),l=m.h(a,"category")
+if(l==null)l=""
+s=m.h(a,"discount")
+if(s==null)s=""
+r=m.h(a,"id")
+if(r==null)r=""
+q=m.h(a,"name")
+if(q==null)q=""
+p=m.h(a,"quantity")
+if(p==null)p=""
+o=m.h(a,"type")
+if(o==null)o=""
+m=m.h(a,"price")
+if(m==null)m=""
+return P.d5([this.a.push(new R.eX(r,q,n,m,s,l,p,o,n,n,n))],t.H)},
 $S:176}
 D.aiG.prototype={
 $0:function(){var s,r,q,p,o=this.a
@@ -69205,12 +69222,12 @@ s.e.dQ(O.dv(s.c,s.a),s.d,"value").ci(new S.aij(this))},
 au:function(){var s,r=this
 r.Ov()
 s=r.a.c.r
-if(s==="Ordered")r.f=1
-else if(s==="outForDev")r.f=2
-else if(s==="Delivered")r.f=3
+if(s==="Ordered")r.e=1
+else if(s==="outForDev")r.e=2
+else if(s==="Delivered")r.e=3
 r.o3()
 r.aH()},
-F:function(a,b){var s,r,q,p,o,n,m=this,l=null,k=t.t,j=T.aI(H.a([L.v("\u20b9 "+H.b(m.a.c.f),l,l,l,l,l),T.an(l,l,F.W(b,!1).a.a*0.23),T.i0(new R.zv(m.f,new S.aic(m),1,3,2,C.z,l))],k),C.i,C.m,C.j)
+F:function(a,b){var s,r,q,p,o,n,m=this,l=null,k=t.t,j=T.aI(H.a([L.v("\u20b9 "+H.b(m.a.c.f),l,l,l,l,l),T.an(l,l,F.W(b,!1).a.a*0.23),T.i0(new R.zv(m.e,new S.aic(m),1,3,2,C.z,l))],k),C.i,C.m,C.j)
 j=Q.lV(l,T.aI(H.a([T.an(l,l,F.W(b,!1).a.a*0.26),L.v("Ordered",l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,10,l,C.p,l,l,!0,l,l,l,l,l,l),l),T.an(l,l,F.W(b,!1).a.a*0.17),L.v("Out for delivery",l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,10,l,C.p,l,l,!0,l,l,l,l,l,l),l),T.an(l,l,F.W(b,!1).a.a*0.15),L.v("Delivered",l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,10,l,C.p,l,l,!0,l,l,l,l,l,l),l)],k),C.i,C.m,C.j),j,l)
 s=m.a.c.z
 r=Math.min(s.length*25+10,200)
@@ -69224,40 +69241,40 @@ o=M.G(l,T.as2(L.v(C.c.N("Add- ",m.a.c.e),l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,l,l,C.
 n=m.a.c.y
 s=T.aI(H.a([q,s,T.aL(H.a([p,o,L.v("Phone no. - "+(n==null?"0":n),l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,l,l,C.p,l,l,!0,l,l,l,l,l,l),l)],k),C.i7,C.m,C.j),T.an(l,l,F.W(b,!1).a.a*0.09),D.yD(L.v("Send to Delivery Boy",l,l,l,l,l),C.z,l,10,new S.aie(m),l,C.f),T.an(l,l,10),D.yD(L.v("Get bill",l,l,l,l,l),C.z,l,10,new S.aif(m),l,C.f),T.an(l,l,10),T.aL(H.a([L.v("Status from delivery Boy",l,l,l,l,l),L.v(m.a.c.r,l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,l,l,C.p,l,l,!0,l,l,l,l,l,l),l)],k),C.i,C.m,C.j)],k),C.i,C.m,C.j)
 q=F.W(b,!1).a
-return V.fz(T.aL(H.a([j,T.aL(H.a([r,new T.aa(C.D,s,l),T.aI(H.a([M.G(l,T.as2(new T.aa(C.D,L.v(C.c.N("Order ID - ",m.a.c.b),l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,l,l,C.p,l,l,!0,l,l,l,l,l,l),l),l),C.k8),l,l,l,l,l,l,l,l,q.a*0.2),T.an(l,l,20),T.aI(H.a([N.el(!1,L.v("Accept",l,l,l,l,l),C.C,C.z,l,l,l,l,l,l,l,l,l,l,l,l,l,l,new S.aig(m),l,l,l,C.f,l,l),T.an(l,l,20),N.el(!1,L.v("Reject",l,l,l,l,l),C.C,C.z,l,l,l,l,l,l,l,l,l,l,l,l,l,l,new S.aih(m),l,l,l,C.f,l,l),T.an(l,l,20),L.v("Status - "+H.b(m.r),l,l,l,l,l),T.an(l,l,F.W(b,!1).a.a*0.1),T.aI(H.a([L.v("Date :- ",l,l,l,B.db(l,l,C.p),l),L.v(m.a.c.Q.ab2().j(0),l,l,l,l,l)],k),C.i,C.m,C.j)],k),C.i,C.ar,C.j)],k),C.i,C.m,C.j)],k),C.i,C.m,C.j)],k),C.i,C.m,C.j),l,l,new V.aD(10,10,10,10))}}
+return V.fz(T.aL(H.a([j,T.aL(H.a([r,new T.aa(C.D,s,l),T.aI(H.a([M.G(l,T.as2(new T.aa(C.D,L.v(C.c.N("Order ID - ",m.a.c.b),l,l,l,A.au(l,l,l,l,l,l,l,l,l,l,l,l,l,C.p,l,l,!0,l,l,l,l,l,l),l),l),C.k8),l,l,l,l,l,l,l,l,q.a*0.2),T.an(l,l,20),T.aI(H.a([N.el(!1,L.v("Accept",l,l,l,l,l),C.C,C.z,l,l,l,l,l,l,l,l,l,l,l,l,l,l,new S.aig(m),l,l,l,C.f,l,l),T.an(l,l,20),N.el(!1,L.v("Reject",l,l,l,l,l),C.C,C.z,l,l,l,l,l,l,l,l,l,l,l,l,l,l,new S.aih(m),l,l,l,C.f,l,l),T.an(l,l,20),L.v("Status - "+H.b(m.f),l,l,l,l,l),T.an(l,l,F.W(b,!1).a.a*0.1),T.aI(H.a([L.v("Date :- ",l,l,l,B.db(l,l,C.p),l),L.v(m.a.c.Q.ab2().j(0),l,l,l,l,l)],k),C.i,C.m,C.j)],k),C.i,C.ar,C.j)],k),C.i,C.m,C.j)],k),C.i,C.m,C.j)],k),C.i,C.m,C.j),l,l,new V.aD(10,10,10,10))}}
 S.aim.prototype={
 $1:function(a){var s=a.a,r=t.h.a(s.gdW(s))
 if(r!=null){s=this.a
-s.e=H.a([],t.EB)
+s.d=H.a([],t.EB)
 J.da(r,new S.aik(s))
 s.H(new S.ail())}},
 $S:9}
 S.aik.prototype={
 $2:function(a,b){var s=J.U(b)
-this.a.e.push(new Z.p4(a,s.h(b,"email"),s.h(b,"password")))},
+this.a.d.push(new Z.p4(a,s.h(b,"email"),s.h(b,"password")))},
 $S:7}
 S.ail.prototype={
 $0:function(){},
 $S:0}
 S.ait.prototype={
 $1:function(a){var s=null,r=t.t,q=this.a
-return E.pI(T.aL(H.a([T.aI(H.a([L.v("User",s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s),L.v("Action",s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s)],r),C.i,C.oD,C.j),M.G(s,B.fL(new S.ais(q,this.b),q.e.length),s,s,s,s,300,s,s,s,500)],r),C.i,C.m,C.j))},
+return E.pI(T.aL(H.a([T.aI(H.a([L.v("User",s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s),L.v("Action",s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s)],r),C.i,C.oD,C.j),M.G(s,B.fL(new S.ais(q,this.b),q.d.length),s,s,s,s,300,s,s,s,500)],r),C.i,C.m,C.j))},
 $S:31}
 S.ais.prototype={
-$2:function(a,b){var s=null,r=this.a,q=L.v(r.e[b].b,s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s),p=K.aj(20)
+$2:function(a,b){var s=null,r=this.a,q=L.v(r.d[b].b,s,s,s,A.au(s,s,s,s,s,s,s,s,s,s,s,s,s,C.p,s,s,!0,s,s,s,s,s,s),s),p=K.aj(20)
 return new T.aa(C.cm,T.aI(H.a([q,new T.aa(C.AA,D.yD(L.bh(C.B2,C.f,s),C.z,s,s,new S.air(r,b,this.b,a),new X.bJ(p,C.u),s),s)],t.t),C.i,C.bD,C.j),s)},
 $C:"$2",
 $R:2,
 $S:523}
 S.air.prototype={
-$0:function(){var s,r,q=this,p=q.a,o=C.b.AO(p.e,new S.aip(p,q.b))
+$0:function(){var s,r,q=this,p=q.a,o=C.b.AO(p.d,new S.aip(p,q.b))
 p=q.c
 s=p.b
 r=F.b1(u.x).bU(0,o.a).bU(0,"orders").bU(0,s)
 r.e.bE(0,r.b,P.a8(["userId",p.c,"paymentMode",p.x,"orderId",s,"Name",p.d,"phoneNo",p.y,"total",p.f,"DateTime",p.Q.NL(),"adderss",p.e,"token",p.ch],t.X,t.z)).a6(0,new S.aiq(q.d),t.P)},
 $S:0}
 S.aip.prototype={
-$1:function(a){return a.b==this.a.e[this.b].b},
+$1:function(a){return a.b==this.a.d[this.b].b},
 $S:524}
 S.aiq.prototype={
 $1:function(a){K.bB(this.a,!1).en(0)
@@ -69266,7 +69283,7 @@ $S:3}
 S.aio.prototype={
 $1:function(a){var s,r,q=null,p=B.U7(B.eC("VegiGrow",B.hC(q,q,q,q,q,q,q,q,q,q,q,30,q,q,q,!0,4,q,q,q),q)),o=B.eC("Name",B.hC(q,q,q,q,q,q,q,q,q,q,q,q,q,C.aJ,q,!0,q,q,q,q),q),n=this.a,m=n.a.c,l=this.b,k=t.CW
 m=H.a([B.ao9(H.a([o,B.eC(m.d,q,q),B.eC("Phone no.",B.hC(q,q,q,q,q,q,q,q,q,q,q,q,q,C.aJ,q,!0,q,q,q,q),q),B.eC(m.y,q,q),B.eC("Shipping address",B.hC(q,q,q,q,q,q,q,q,q,q,q,q,q,C.aJ,q,!0,q,q,q,q),q),B.eC(m.e,B.hC(q,q,q,q,q,q,l,q,q,q,q,q,q,q,q,!0,q,q,q,q),q)],k),C.nl),B.ao9(H.a([B.eC("Order ID",B.hC(q,q,q,q,q,q,q,q,q,q,q,q,q,C.aJ,q,!0,q,q,q,q),q),B.eC(n.a.c.b,q,q),B.eC("Date & Time",B.hC(q,q,q,q,q,q,q,q,q,q,q,q,q,C.aJ,q,!0,q,q,q,q),q),B.eC(this.c.j(0),q,q)],k),C.nl)],k)
-l=B.hC(q,q,q,q,q,q,l,q,q,q,q,q,q,q,q,!0,q,q,q,q)
+l=B.hC(q,q,q,q,q,q,l,q,q,q,q,8,q,q,q,!0,q,q,q,q)
 o=H.a([],t.TE)
 o.push(H.a(["Name","quantity","Price","Net price"],t.V))
 for(s=n.a.c.z,s=new H.ac(s,new S.ain(),H.ao(s).i("ac<1,w<f*>*>")),s=new H.cM(s,s.gl(s));s.n();){r=s.d
@@ -69279,7 +69296,7 @@ $S:526}
 S.aij.prototype={
 $1:function(a){var s=a.a,r=s.gdW(s)
 if(r!=null){s=this.a
-s.r=J.ab(r,"acceptStatus")
+s.f=J.ab(r,"acceptStatus")
 s.H(new S.aii())}},
 $S:9}
 S.aii.prototype={
@@ -69300,7 +69317,7 @@ q.e.bE(0,q.b,P.a8(["orderStatus",s],p,o))
 r.H(new S.aib(r,a))},
 $S:527}
 S.aib.prototype={
-$0:function(){this.a.f=this.b},
+$0:function(){this.a.e=this.b},
 $S:0}
 S.aid.prototype={
 $1:function(a){var s,r=null,q=L.v(a.b,r,r,r,A.au(r,r,r,r,r,r,r,r,r,r,r,18,r,C.p,r,r,!0,r,r,r,r,r,r),r),p=T.an(r,r,20),o=a.r,n=H.b(o)+"x \u20b9 ",m=a.d
